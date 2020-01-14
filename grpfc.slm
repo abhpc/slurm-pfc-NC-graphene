@@ -103,5 +103,7 @@ ovitos xyz2lmp.py
 
 sed -i "s@0.0 0.0 zlo zhi@-10.0 10.0 zlo zhi@g" graphene.data
 
+prename "s/:/-/g" *
+
 # 运行完后清理nodelist
 rm -rf $CURDIR/nodelist.$SLURM_JOB_ID
