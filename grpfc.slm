@@ -17,6 +17,10 @@
 
 # 以下行如果不懂，可以不管，按默认的即可。如果你知道其含义的话，可以进行自定义修改。
 
+module load ovito/2.9.0
+module load gcc/6.4.0
+module load java/13.0.1
+
 # 定义PFC程序安装目录
 GRPFC="$HOME/bin/grpfc"
 
@@ -94,9 +98,6 @@ from ovito.io import export_file
 node = import_file("graphene.xyz", columns = ["Particle Identifier", "Particle Type", "Position.X", "Position.Y", "Position.Z"])
 export_file(node, "graphene.data", "lammps_data")
 EOF
-
-module load ovito/2.9.0
-module load gcc/6.4.0
 
 ovitos xyz2lmp.py
 
