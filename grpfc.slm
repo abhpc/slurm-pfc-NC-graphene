@@ -30,7 +30,7 @@ W=1000
 # Height, unit: ang
 H=1000
 
-# Number of grains
+# Number of seeds
 N=36
 
 # Radius of seed
